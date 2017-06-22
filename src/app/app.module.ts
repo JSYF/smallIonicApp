@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { ImagePage } from './../pages/image/image';
 import { TimelinePage } from './../pages/timeline/timeline';
 import { YouPage } from './../pages/you/you';
@@ -17,7 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     YouPage,
     TimelinePage,
     ImagePage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     YouPage,
     TimelinePage,
     ImagePage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
