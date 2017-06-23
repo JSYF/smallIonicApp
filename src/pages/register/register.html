@@ -1,0 +1,28 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item style='margin-top:3rem'>
+      <ion-label floating>UserName</ion-label>
+      <ion-input type="text" #username></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" #password></ion-input>
+    </ion-item>
+  <div style='margin-top:1rem;'>
+    <button ion-button block color='danger' (click)='register(username.value,password.value)'>注册</button>
+  </div>
+</ion-content>
