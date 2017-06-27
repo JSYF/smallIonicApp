@@ -1,7 +1,7 @@
-
+import { AddListItemComponent } from './../components/add-list-item/add-list-item';
+import { ListPage } from './../pages/list/list';
 import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
-import { ImagePage } from './../pages/image/image';
 import { TimelinePage } from './../pages/timeline/timeline';
 import { YouPage } from './../pages/you/you';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -22,12 +22,13 @@ import { AutoRiseDirective } from '../directives/auto-rise/auto-rise';
     MyApp,
     YouPage,
     TimelinePage,
-    ImagePage,
     TabsPage,
     LoginPage,
     RegisterPage,
     AddTimeLineComponent,
     AutoRiseDirective,
+    ListPage,
+    AddListItemComponent
   ],
   imports: [
     BrowserModule,
@@ -38,18 +39,18 @@ import { AutoRiseDirective } from '../directives/auto-rise/auto-rise';
     MyApp,
     YouPage,
     TimelinePage,
-    ImagePage,
     TabsPage,
     LoginPage,
     RegisterPage,
+    ListPage,
     AddTimeLineComponent,
-    // AutoRiseDirective
+    AddListItemComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     JsonDataProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

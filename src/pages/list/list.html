@@ -1,0 +1,73 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='primary' no-border-bottom>
+    <ion-title text-center>To Do List</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)='addToDoItem()'>
+       <ion-icon ios="ios-add-circle-outline" md="ios-add-circle-outline" style='font-size:2.5rem;'></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="list">
+      <ion-segment-button value="todolist">
+        Todolist
+      </ion-segment-button>
+      <ion-segment-button value="donelist">
+        Donelist
+      </ion-segment-button>
+      <ion-segment-button value="undonelist">
+        UndoneList
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <div [ngSwitch]="list">
+    <ion-list *ngSwitchCase="'todolist'" >
+      <ion-item-sliding *ngFor="let items of todolist">
+        <ion-item>
+          <h2>{{items.content}}</h2>
+          <p>Deadline:{{items.endTime}}</p>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button color='secondary' (click)='editItem(items.id)'>Edit</button>
+          <button ion-button color='primary' (click)='setItem(items.id)'>Set</button>
+          <button ion-button color='danger' (click) ='delItem(items.id)'>Del</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <ion-list *ngSwitchCase="'donelist'" >
+      <ion-item-sliding *ngFor="let items of donelist" >
+        <ion-item>
+          <h2>{{items.content}}</h2>
+          <p style='color:green'>Deadline:{{items.endTime}}</p>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button color='danger' (click) ='delItem(items.id)'>Del</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <ion-list *ngSwitchCase="'undonelist'">
+      <ion-item-sliding *ngFor="let items of undonelist" >
+        <ion-item>
+          <h2>{{items.content}}</h2>
+          <p style='color:red'>Deadline:{{items.endTime}}</p>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button color='danger' (click) ='delItem(items.id)'>Del</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+</ion-content>

@@ -13,8 +13,7 @@ import { IonicPage, NavController, NavParams, ModalController, Events, AlertCont
 @IonicPage()
 @Component({
   selector: 'page-timeline',
-  templateUrl: 'timeline.html',
-  providers: [JsonDataProvider]
+  templateUrl: 'timeline.html'
 })
 export class TimelinePage {
   data: any;
@@ -64,7 +63,6 @@ export class TimelinePage {
     });
   }
   logout () {
-    
     this.events.publish("user:logout")
   }
 }

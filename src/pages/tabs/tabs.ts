@@ -1,6 +1,6 @@
+import { ListPage } from './../list/list';
 import { TimelinePage } from './../timeline/timeline';
 import { YouPage } from './../you/you';
-import { ImagePage } from './../image/image';
 import { Component } from '@angular/core';
 
 
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class TabsPage {
 
   tab1Root = TimelinePage;
-  tab2Root = ImagePage;
+  tab2Root = ListPage;
   tab3Root = YouPage;
 
   constructor() {

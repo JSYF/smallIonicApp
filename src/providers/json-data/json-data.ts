@@ -1,3 +1,4 @@
+import { ToDoListData } from './../../data/todolistData';
 import { TimeLinedata } from './../../data/tiemlineData';
 import { Injectable } from '@angular/core';
 // import { Http } from '@angular/http';
@@ -13,5 +14,8 @@ import { Injectable } from '@angular/core';
 export class JsonDataProvider {
   getTimeLineData(){
     return TimeLinedata
+  }
+  getToDoListData(){
+    return ToDoListData
   }
 }

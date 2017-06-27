@@ -1,0 +1,26 @@
+<!-- Generated template for the AddTimeLineComponent component -->
+<ion-header>
+
+  <ion-navbar color='primary'>
+    <ion-buttons left>
+      <button ion-button (click)='back()'>
+        <ion-icon name='arrow-back'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Add TodoList Item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Content</ion-label>
+    <ion-textarea class='text-area'  #content auto-rise style='margin:0!important;'></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Endtime</ion-label>
+    <ion-datetime displayFormat="YYYY-MMM-DD HH:mm" pickerFormat="YYYY MMM DD HH mm" [(ngModel)]="timer" doneText='Ok' max='2025' min='{{mintime}}'></ion-datetime>
+  </ion-item>
+  <button (click)='showTime(content.value)' block ion-button>Add Todo Item</button>
+</ion-content>

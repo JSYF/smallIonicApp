@@ -1,0 +1,4 @@
+export const ToDoListData = {"index":6,"list":[{ "id": 0, "content": "todoText1", "endTime": "2017/Jun/30 10:30", "status": 0 }, { "id": 1, "content": "todoText1", "endTime": "2017/Jun/30 10:30", "status": 0 }, { "id": 2, "content": "todoText1", "endTime": "2017/Jun/30 10:30", "status": 0 }, { "id": 3, "content": "todoText1", "endTime": "2017/Jun/30 10:30", "status": 0 }, { "id": 4, "content": "todoText1", "endTime": "2017/Jun/30 10:30", "status": 1 }, { "id": 5, "content": "todoText1", "endTime": "2017/Jun/19 10:30", "status": 2 }, { "id": 6, "content": "todoText1", "endTime": "2017/Jun/10 10:30", "status": 2 }]}
+
+
+// status: 0准备做，1做完，2未做完。

@@ -1,4 +1,4 @@
-import { NavController, Events } from 'ionic-angular';
+import { NavController, Events, ViewController } from 'ionic-angular';
 import { TimeLinedata } from './../../data/tiemlineData';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Component } from '@angular/core';
@@ -21,7 +21,7 @@ export class AddTimeLineComponent {
   // addStatus = false;
   // imgUrl = '123';
   //test end
-  constructor(public camera: Camera, public navCtrl: NavController, public events: Events) {
+  constructor(public camera: Camera, public viewCtrl: ViewController, public events: Events) {
   }
 
 
@@ -60,9 +60,9 @@ export class AddTimeLineComponent {
     TimeLinedata.unshift(tempData);
     this.events.publish("timeline:update", TimeLinedata);
     localStorage.setItem("timeline", JSON.stringify(TimeLinedata));
-    this.navCtrl.pop();
+    this.viewCtrl.dismiss();
   }
   back(){
-    this.navCtrl.pop();
+    this.viewCtrl.dismiss();
   }
 }
