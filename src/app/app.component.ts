@@ -1,4 +1,3 @@
-import { ListPage } from './../pages/list/list';
 
 import { LoginPage } from './../pages/login/login';
 import { Component } from '@angular/core';
@@ -12,7 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = ListPage;
+  rootPage: any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

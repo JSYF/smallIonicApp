@@ -1,9 +1,9 @@
+import { MePage } from './../pages/me/me';
 import { AddListItemComponent } from './../components/add-list-item/add-list-item';
 import { ListPage } from './../pages/list/list';
 import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
 import { TimelinePage } from './../pages/timeline/timeline';
-import { YouPage } from './../pages/you/you';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -20,7 +20,6 @@ import { AutoRiseDirective } from '../directives/auto-rise/auto-rise';
 @NgModule({
   declarations: [
     MyApp,
-    YouPage,
     TimelinePage,
     TabsPage,
     LoginPage,
@@ -28,6 +27,7 @@ import { AutoRiseDirective } from '../directives/auto-rise/auto-rise';
     AddTimeLineComponent,
     AutoRiseDirective,
     ListPage,
+    MePage,
     AddListItemComponent
   ],
   imports: [
@@ -37,12 +37,12 @@ import { AutoRiseDirective } from '../directives/auto-rise/auto-rise';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    YouPage,
     TimelinePage,
     TabsPage,
     LoginPage,
     RegisterPage,
     ListPage,
+    MePage,
     AddTimeLineComponent,
     AddListItemComponent
   ],

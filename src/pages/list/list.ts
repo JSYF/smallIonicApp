@@ -142,4 +142,7 @@ export class ListPage {
       }
     })
   }
+  logout () {
+    this.events.publish("user:logout")
+  }
 }
